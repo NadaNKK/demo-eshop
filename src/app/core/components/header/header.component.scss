@@ -1,0 +1,28 @@
+
+.top-menu {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+    list-style: none;
+    border-bottom: 1px solid;
+
+    li {
+        padding: 5px;
+        cursor: pointer;
+
+        &:first-child{
+            font-weight: 600;
+        }
+        
+        &.active {
+            background-color: #333;
+            color:#fff;
+
+        }
+        &.right {
+            margin-left: auto;
+        }
+    }
+    
+}
+

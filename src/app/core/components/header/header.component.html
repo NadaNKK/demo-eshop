@@ -1,0 +1,8 @@
+
+<ul class="top-menu">
+    <li routerLink="/">{{'Ecommerce' | titlecase }}</li>
+
+    @for (item of items; track $index) {   
+        <li [routerLink]="item.router" routerLinkActive="active" [class.right]="item.name=='login'">{{item.name | titlecase }}</li>
+    }
+</ul>
