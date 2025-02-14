@@ -1,0 +1,34 @@
+form {
+    max-width: 300px;
+    margin: 15px auto;
+    padding: 15px;
+    border: 1px solid #dedbdb;
+
+    h4{
+        margin-bottom: 15px;
+    }
+
+    label.subtitle {
+        display: block;
+        margin-bottom: 8px;
+        color: #b5aeae;
+        font-size: 12px;
+      }
+
+      label {
+        color: #b5aeae;
+        font-size: 10px;
+      }
+
+      input[type="text"], input[type="password"] {
+        width: 90%;
+        margin-bottom: 20px;
+        padding: 8px;
+        border: 1px solid #ccc;
+      }
+  }
+  
+ 
+  
+
+  

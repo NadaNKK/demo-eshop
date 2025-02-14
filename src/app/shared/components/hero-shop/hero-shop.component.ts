@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero-shop',
@@ -9,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class HeroShopComponent {
 
+  constructor(private router: Router) { }
+
+  navigateToProducts() {
+    this.router.navigate(['/shop']);
+  }
 }
