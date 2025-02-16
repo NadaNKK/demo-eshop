@@ -1,31 +1,24 @@
-<p>products-list works!</p>
-<div class="product-grid">
-    <div class="product">
-        <img src="https://via.placeholder.com/300" alt="Product Image">
-        <div class="product-info">
-            <h2>Product Name</h2>
-            <p>This is a sample product description.</p>
-        </div>
-    </div>
-    <div class="product">
-        <img src="https://via.placeholder.com/300" alt="Product Image">
-        <div class="product-info">
-            <h2>Product Name</h2>
-            <p>This is a sample product description.</p>
-        </div>
-    </div>
-    <div class="product">
-        <img src="https://via.placeholder.com/300" alt="Product Image">
-        <div class="product-info">
-            <h2>Product Name</h2>
-            <p>This is a sample product description.</p>
-        </div>
-    </div>
-    <div class="product">
-        <img src="/src/app/shared/assets/images/model.jpg" alt="Product Image">
-        <div class="product-info">
-            <h2>Product Name</h2>
-            <p>This is a sample product description.</p>
-        </div>
+<div class="pt-4">
+    <div class="container">
+    <div class="row">
+        @for (product of productList; track $index) {
+
+            <div class="col-lg-3 col-sm-12 mb-4">
+                <div class="product">
+                    <img [src]="product.imageUrl" alt="Product Image">
+                    <div class="product-info">
+                        <div class="d-flex justify-content-between">
+                            <h2>{{product.name}}</h2>
+                            <span class="size">{{product.size}}</span>
+                        </div>
+                        
+                        <p>{{product.price| currency:'USD'}}</p>
+                    </div>
+                </div>
+            </div>
+        }
+
     </div>
 </div>
+</div>
+

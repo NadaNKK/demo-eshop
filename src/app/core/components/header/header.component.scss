@@ -1,10 +1,13 @@
+.head-border{
+     border-bottom: 1px solid;
+}
 
-.top-menu {
+.top-menu ul {
     display: flex;
     justify-content: flex-start;
     padding: 5px;
     list-style: none;
-    border-bottom: 1px solid;
+    margin-bottom: 0;
 
     li {
         padding: 5px;
