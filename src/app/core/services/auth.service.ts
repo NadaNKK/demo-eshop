@@ -1,18 +1,22 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import { Observable } from 'rxjs';
+import {API} from "../constants/api.constant";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private http:HttpClient) { }
-  
-  login(data:{username:string,password:string}):Observable<any> {
-    return this.http.post('https://fakestoreapi.com/auth/login',{
+  #http = inject(HttpClient)
+
+  login(data: {username: string, password: string}): Observable<any> {
+    const url = `${API.URL}/auth/login`;
+    const body = {
       username: data.username,
-      password: data.username
-  });
+      password: data.password
+    };
+
+    return this.#http.post(url, body);
   }
 }

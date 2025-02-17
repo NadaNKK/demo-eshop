@@ -1,14 +1,22 @@
+<form [formGroup]="form" (reset)="reset()" (ngSubmit)="formSubmit(form.value)">
+  <h4>Welcome back</h4>
+  <label for="username" class="form-label">Login with email</label>
+  <div>
+    <input type="text" class="form-control" id="username" aria-describedby="username" formControlName="username" placeholder="Enter Username">
+  </div>
 
-<form>
-    <h4>Welcome back</h4>
-    <label class="subtitle">Login with email</label>
-    <div>
-      <input type="text" id="email" name="email" placeholder="Email" required>
-    </div>
-    <div>     
-      <input type="password" id="password" name="password" placeholder="Password" required>
-    </div>  
-    <input type="checkbox" id="remember" name="remember">
-    <label for="remember">Remember me</label>
-  </form>
- <button (click)="loginCall()">Mock Login</button>
+  <label for="password" class="form-label">Password</label>
+  <div>
+    <input type="password" class="form-control" id="password" name="password" placeholder="Password" formControlName="password">
+  </div>
+
+
+  <button class="btn btn-primary w-100 mb-2" [class.disabled]="form.invalid" [disabled]="form.invalid">Submit</button>
+  <button type="reset" class="btn btn-outline-danger w-100">Reset</button>
+</form>
+
+<h4>
+  {{form.value| json}}
+</h4>
+
+<!--<button (click)="loginCall()">Mock Login</button>-->
